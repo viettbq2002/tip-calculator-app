@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [URL]([https://your-solution-url.com](https://github.com/viettbq2002/tip-calculator-app))
-- Live Site URL: [Add live site URL here](https://tip-calculator-app-eight.vercel.app/)
+- Solution URL: [https://github.com/viettbq2002/tip-calculator-app]
+- Live Site URL: [Click here](https://tip-calculator-app-eight.vercel.app/)
 
 ## My process
 Done in amount four hours coding
