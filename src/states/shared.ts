@@ -3,6 +3,7 @@ import { atom } from "jotai";
 export const billAtom = atom(0);
 export const tipPercentAtom = atom(0);
 export const personAtom = atom(0);
+export const isInputChangeAtom = atom(false);
 
 export const tipAmountAtom = atom((get) => {
   const bill = get(billAtom);

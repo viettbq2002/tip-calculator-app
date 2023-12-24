@@ -10,6 +10,7 @@ import {
 import { useAtomValue, useSetAtom } from "jotai";
 import {
   billAtom,
+  isInputChangeAtom,
   personAtom,
   tipAmountAtom,
   tipPercentAtom,
@@ -22,17 +23,20 @@ const TipResult = () => {
   const setBill = useSetAtom(billAtom);
   const setTipPercent = useSetAtom(tipPercentAtom);
   const setPerson = useSetAtom(personAtom);
+  const setIsInputChange = useSetAtom(isInputChangeAtom);
+
   const handleReset = () => {
     setBill(0);
     setTipPercent(0);
     setPerson(0);
+    setIsInputChange(false);
   };
   return (
     <Card p="1rem" color="white" bg="hsl(183, 100%, 15%)">
       <CardBody>
         {/* first result */}
         <Flex gap="7rem" alignItems={"center"} flexDir={"column"}>
-          <VStack spacing={"1rem"}>
+          <VStack w={"100%"} justifyContent={"space-between"} spacing={"1rem"}>
             <HStack spacing="10rem">
               <VStack spacing="0" alignItems={"flex-start"}>
                 <Text>Tip Amount</Text>
@@ -47,9 +51,9 @@ const TipResult = () => {
             {/* end first result */}
             {/* second result */}
 
-            <HStack spacing="10rem">
+            <HStack w={"100%"} justifyContent={"space-between"} spacing="10rem">
               <VStack spacing="0" alignItems={"flex-start"}>
-                <Text>Tip Amount</Text>
+                <Text>Total</Text>
                 <Text textColor={"hsl(184, 14%, 56%)"} fontSize="0.8rem">
                   / Person
                 </Text>

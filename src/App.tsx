@@ -10,19 +10,20 @@ import {
   Image,
   VStack,
 } from "@chakra-ui/react";
-import { useAtom, useSetAtom } from "jotai";
+import { useAtom, useAtomValue } from "jotai";
 import "./App.css";
 import { GridTipButton } from "./Components/GridTipButton";
 import InputWithIcon from "./Components/InputWithIcon";
 import TipResult from "./Components/TipResult";
-import { billAtom, personAtom } from "./states/shared";
+import { billAtom, isInputChangeAtom, personAtom } from "./states/shared";
 import dollarIcon from "/images/icon-dollar.svg";
 import personIcon from "/images/icon-person.svg";
 import logo from "/images/logo.svg";
 
 function App() {
-  const setBill = useSetAtom(billAtom);
+  const [bill, setBill] = useAtom(billAtom);
   const [person, setPerson] = useAtom(personAtom);
+  const isInputChange = useAtomValue(isInputChangeAtom);
   const handleChangeBill = (e: React.ChangeEvent<HTMLInputElement>) => {
     setBill(Number(e.target.value));
   };
@@ -46,6 +47,7 @@ function App() {
                 <FormControl>
                   <FormLabel>Bill</FormLabel>
                   <InputWithIcon
+                    inputValue={bill}
                     inputChangeHandler={handleChangeBill}
                     icon={dollarIcon}
                   />
@@ -54,12 +56,13 @@ function App() {
                   <FormLabel>Select Tip %</FormLabel>
                   <GridTipButton />
                 </Box>
-                <FormControl isInvalid={person === 0}>
+                <FormControl isInvalid={person === 0 && isInputChange}>
                   <Flex justifyContent={"space-between"}>
                     <FormLabel>Number of people</FormLabel>
                     <FormErrorMessage>Can't be Zero</FormErrorMessage>
                   </Flex>
                   <InputWithIcon
+                    inputValue={person}
                     inputChangeHandler={handleChangePerson}
                     icon={personIcon}
                   />
