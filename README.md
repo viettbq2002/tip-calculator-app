@@ -8,11 +8,7 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
@@ -30,20 +26,17 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![image](https://github.com/viettbq2002/tip-calculator-app/assets/98259617/b21412ea-7dce-4f59-a7b5-9a8c402f2114)
+![image](https://github.com/viettbq2002/tip-calculator-app/assets/98259617/f6ba43c1-39f2-49c2-a232-3e72e390df12)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+![image](https://github.com/viettbq2002/tip-calculator-app/assets/98259617/7ac8bae0-e01d-48c5-9e09-06a7afead148)
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
 
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
 ### Links
 
 - Solution URL: [URL]([https://your-solution-url.com](https://github.com/viettbq2002/tip-calculator-app))
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://tip-calculator-app-eight.vercel.app/)
 
 ## My process
 Done in amount four hours coding
@@ -88,7 +81,6 @@ export const totalTipAmountAtom = atom((get) => {
 ```
 
 ## Author
-
 - Frontend Mentor - [@viettbq](https://www.frontendmentor.io/profile/viettbq2002)
 - Linkedin - [https://www.linkedin.com/in/qu%E1%BB%91c-vi%E1%BB%87t-103968237/]
 
